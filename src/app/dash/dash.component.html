@@ -1,0 +1,41 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+    <!--Mini Cards-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
+      [rowspan]="( cardLayout | async )?.miniCard.rows">
+      <app-mini-card title="Active" [value]="globalToday?.active || 33199999"></app-mini-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
+      [rowspan]="( cardLayout | async )?.miniCard.rows">
+      <app-mini-card title="Deaths" [value]="globalToday?.deaths || 777777"></app-mini-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
+      [rowspan]="( cardLayout | async )?.miniCard.rows">
+      <app-mini-card title="Recovered" [value]="globalToday?.recovered || 555555"></app-mini-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
+      [rowspan]="( cardLayout | async )?.miniCard.rows">
+      <app-mini-card title="Updated" [value]="globalToday?.update || 1618204504874 | date: 'mm-dd-yyyy hh'"></app-mini-card>
+    </mat-grid-tile>
+    <!--Charts-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols"
+      [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="US Cases">
+        <app-line [lineChartData]="usData.data" [lineChartLabels]="usData.labels"></app-line>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols"
+      [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="Active Cases by Continents">
+        <app-pie [pieChartData]="continents.data" [pieChartLabels]="continents.labels"></app-pie>
+      </app-card>
+    </mat-grid-tile>
+    <!--Table-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
+      <app-card title="Cases by States">
+        <app-table [tableData]="statesData"></app-table>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
