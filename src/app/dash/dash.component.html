@@ -4,19 +4,19 @@
     <!--Mini Cards-->
     <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
-      <app-mini-card title="Active" [value]="globalToday?.active"></app-mini-card>
+      <app-mini-card color="orange" title="Active" [value]="globalToday?.active"></app-mini-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
-      <app-mini-card title="Deaths" [value]="globalToday?.deaths"></app-mini-card>
+      <app-mini-card color="red" title="Deaths" [value]="globalToday?.deaths"></app-mini-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
-      <app-mini-card title="Recovered" [value]="globalToday?.recovered"></app-mini-card>
+      <app-mini-card color="blue" title="Recovered" [value]="globalToday?.recovered"></app-mini-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
-      <app-mini-card title="Updated" [value]="globalToday?.updated | date: 'short'"></app-mini-card>
+      <app-mini-card color="black" title="Updated" [value]="globalToday?.updated | date: 'short'"></app-mini-card>
     </mat-grid-tile>
     <!--Charts-->
     <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols"
