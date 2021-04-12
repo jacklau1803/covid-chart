@@ -9,10 +9,11 @@
     <ng-container matColumnDef="cases">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Cases</th>
       <td mat-cell *matCellDef="let row">
-        <mat-chip-list>
-          <mat-chip class="case">
+        <mat-chip-list class="case">
+          <mat-chip>
             {{row.cases}}
           </mat-chip>
+          <sup>+{{row.todayCases}}</sup>
         </mat-chip-list>
       </td>
     </ng-container>
@@ -20,10 +21,11 @@
     <ng-container matColumnDef="deaths">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Deaths</th>
       <td mat-cell *matCellDef="let row">
-        <mat-chip-list>
-          <mat-chip class="death">
+        <mat-chip-list class="death">
+          <mat-chip>
             {{row.deaths}}
           </mat-chip>
+          <sup>+{{row.todayDeaths}}</sup>
         </mat-chip-list>
       </td>
     </ng-container>
@@ -31,8 +33,8 @@
     <ng-container matColumnDef="recovered">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Recovered</th>
       <td mat-cell *matCellDef="let row">
-        <mat-chip-list>
-          <mat-chip class="recovered">
+        <mat-chip-list class="recovered">
+          <mat-chip>
             {{row.recovered}}
           </mat-chip>
         </mat-chip-list>

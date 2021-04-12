@@ -4,15 +4,15 @@
     <!--Mini Cards-->
     <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
-      <app-mini-card color="orange" title="Active" [value]="globalToday?.active"></app-mini-card>
+      <app-mini-card color="orange" title="Active" [value]="globalToday?.active" [valueToday]="globalToday?.todayCases"></app-mini-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
-      <app-mini-card color="red" title="Deaths" [value]="globalToday?.deaths"></app-mini-card>
+      <app-mini-card color="red" title="Deaths" [value]="globalToday?.deaths" [valueToday]="globalToday?.todayDeaths"></app-mini-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
-      <app-mini-card color="blue" title="Recovered" [value]="globalToday?.recovered"></app-mini-card>
+      <app-mini-card color="blue" title="Recovered" [value]="globalToday?.recovered" [valueToday]="globalToday?.todayRecovered"></app-mini-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">

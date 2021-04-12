@@ -2,14 +2,27 @@
   width: 100%;
 }
 
-.case {
+.case mat-chip{
   background-color: orange;
 }
 
-.death {
+.death mat-chip{
   background-color: rgba(255, 0, 0, 0.664);
 }
 
-.recovered {
+.recovered mat-chip{
   background-color: rgb(119, 191, 224);
 }
+
+.case sup{
+  color: orange;
+}
+
+.death sup{
+  color: rgba(255, 0, 0, 0.664);
+}
+
+.recovered sup{
+  color: rgb(119, 191, 224);
+}
+
