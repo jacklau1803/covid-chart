@@ -100,6 +100,7 @@ export class DashComponent {
   getGlobalToday() {
     return this.covidDataService.getGlobalToday().subscribe({
       next: data => {
+        this.globalToday = data;
         console.log(data);
       }
     });

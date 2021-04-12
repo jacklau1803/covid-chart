@@ -26,7 +26,7 @@ import { TableComponent } from './charts/table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
 import { MiniCardComponent } from './mini-card/mini-card.component';
 
 @NgModule({
